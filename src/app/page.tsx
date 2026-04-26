@@ -110,6 +110,7 @@ export default function LandingPage() {
       <ContactText
       text="Ready to start your adventure? Let's chat directly on WhatsApp."
       background={{ variant: "gradient-bars" }}
+      useInvertedBackground={false}
       buttons={[{ text: "Chat on WhatsApp", onClick: () => whatsappRedirect("Hi, I'm ready to start my adventure in Northern Pakistan!") }]}
     />
   </div>
