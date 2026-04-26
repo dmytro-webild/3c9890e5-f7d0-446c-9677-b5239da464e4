@@ -42,7 +42,7 @@ export default function PlannerPage() {
             sections={[
               {
                 heading: "Getting Started",                content: {
-                  type: "numbered-list",                  items: ["Input your duration", "Select your regions", "Request local quotes"]
+                  items: ["Input your duration", "Select your regions", "Request local quotes"]
                 }
               },
             ]}
