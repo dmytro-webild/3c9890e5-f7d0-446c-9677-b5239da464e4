@@ -42,10 +42,7 @@ export default function HotelsPage() {
             useInvertedBackground={false}
             title="Luxury and Comfort"
             description="Top-rated stays in the mountains."
-            features={[
-              { title: "Luxury Stays", description: "High-end hotels in mountain ranges." },
-              { title: "Cozy Guest Houses", description: "Experience authentic local hospitality." }
-            ]}
+            features={[]}
           />
         </div>
 
