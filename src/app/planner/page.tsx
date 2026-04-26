@@ -25,26 +25,11 @@ export default function LandingPage() {
   <div id="nav" data-section="nav">
       <NavbarStyleFullscreen
       navItems={[
-        {
-          name: "Home",
-          id: "/",
-        },
-        {
-          name: "Hotels",
-          id: "/hotels",
-        },
-        {
-          name: "Drivers",
-          id: "/drivers",
-        },
-        {
-          name: "Destinations",
-          id: "/destinations",
-        },
-        {
-          name: "Plan Trip",
-          id: "/planner",
-        },
+        { name: "Home", id: "/" },
+        { name: "Hotels", id: "/hotels" },
+        { name: "Drivers", id: "/drivers" },
+        { name: "Destinations", id: "/destinations" },
+        { name: "Plan Trip", id: "/planner" },
       ]}
       brandName="Nornomade"
     />
@@ -56,14 +41,9 @@ export default function LandingPage() {
       title="How the Planner Works"
       sections={[
         {
-          heading: "Getting Started",
-          content: {
-            type: "numbered-list",
+          heading: "Getting Started",          content: {
             items: [
-              "Input your duration",
-              "Select your regions",
-              "Request local quotes",
-            ],
+              "Input your duration",              "Select your regions",              "Request local quotes"],
           },
         },
       ]}
@@ -77,18 +57,8 @@ export default function LandingPage() {
       description="Tell us about your dream trip."
       imageSrc="http://img.b2bpic.net/free-photo/beach-chairs-near-lake-hills-covered-greenery_181624-14763.jpg"
       inputs={[
-        {
-          name: "trip-type",
-          type: "text",
-          placeholder: "e.g. Hiking, Family Tour",
-          required: true,
-        },
-        {
-          name: "budget",
-          type: "text",
-          placeholder: "Budget Range",
-          required: true,
-        },
+        { name: "trip-type", type: "text", placeholder: "e.g. Hiking, Family Tour", required: true },
+        { name: "budget", type: "text", placeholder: "Budget Range", required: true },
       ]}
     />
   </div>
@@ -97,29 +67,15 @@ export default function LandingPage() {
       <FooterSimple
       columns={[
         {
-          title: "Explore",
-          items: [
-            {
-              label: "Hunza",
-              href: "/destinations",
-            },
-            {
-              label: "Skardu",
-              href: "/destinations",
-            },
+          title: "Explore",          items: [
+            { label: "Hunza", href: "/destinations" },
+            { label: "Skardu", href: "/destinations" },
           ],
         },
         {
-          title: "Services",
-          items: [
-            {
-              label: "Hotels",
-              href: "/hotels",
-            },
-            {
-              label: "Drivers",
-              href: "/drivers",
-            },
+          title: "Services",          items: [
+            { label: "Hotels", href: "/hotels" },
+            { label: "Drivers", href: "/drivers" },
           ],
         },
       ]}
