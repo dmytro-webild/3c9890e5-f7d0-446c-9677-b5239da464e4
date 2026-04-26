@@ -25,26 +25,11 @@ export default function LandingPage() {
   <div id="nav" data-section="nav">
       <NavbarStyleFullscreen
       navItems={[
-        {
-          name: "Home",
-          id: "/",
-        },
-        {
-          name: "Hotels",
-          id: "/hotels",
-        },
-        {
-          name: "Drivers",
-          id: "/drivers",
-        },
-        {
-          name: "Destinations",
-          id: "/destinations",
-        },
-        {
-          name: "Plan Trip",
-          id: "/planner",
-        },
+        { name: "Home", id: "/" },
+        { name: "Hotels", id: "/hotels" },
+        { name: "Drivers", id: "/drivers" },
+        { name: "Destinations", id: "/destinations" },
+        { name: "Plan Trip", id: "/planner" },
       ]}
       brandName="Nornomade"
     />
@@ -57,6 +42,10 @@ export default function LandingPage() {
       useInvertedBackground={false}
       title="Luxury and Comfort"
       description="Top-rated stays in the mountains."
+      features={[
+          { title: "Luxury Stays", description: "High-end hotels in mountain ranges.", imageSrc: "http://img.b2bpic.net/free-photo/skjolden-norway-may-16-2023-mountain_58702-11010.jpg" },
+          { title: "Cozy Guest Houses", description: "Experience authentic local hospitality.", imageSrc: "http://img.b2bpic.net/free-photo/house-body-water-mountain_198169-189.jpg" }
+      ]}
     />
   </div>
 
@@ -67,18 +56,8 @@ export default function LandingPage() {
       description="Direct inquiry to local hotels."
       imageSrc="http://img.b2bpic.net/free-photo/beautiful-high-angle-shot-mountainous-scenery-clear-sky_181624-8080.jpg"
       inputs={[
-        {
-          name: "checkin",
-          type: "date",
-          placeholder: "Arrival",
-          required: true,
-        },
-        {
-          name: "nights",
-          type: "number",
-          placeholder: "Nights",
-          required: true,
-        },
+        { name: "checkin", type: "date", placeholder: "Arrival", required: true },
+        { name: "nights", type: "number", placeholder: "Nights", required: true },
       ]}
     />
   </div>
@@ -87,29 +66,15 @@ export default function LandingPage() {
       <FooterSimple
       columns={[
         {
-          title: "Explore",
-          items: [
-            {
-              label: "Hunza",
-              href: "/destinations",
-            },
-            {
-              label: "Skardu",
-              href: "/destinations",
-            },
+          title: "Explore",          items: [
+            { label: "Hunza", href: "/destinations" },
+            { label: "Skardu", href: "/destinations" },
           ],
         },
         {
-          title: "Services",
-          items: [
-            {
-              label: "Hotels",
-              href: "/hotels",
-            },
-            {
-              label: "Drivers",
-              href: "/drivers",
-            },
+          title: "Services",          items: [
+            { label: "Hotels", href: "/hotels" },
+            { label: "Drivers", href: "/drivers" },
           ],
         },
       ]}

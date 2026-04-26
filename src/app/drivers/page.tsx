@@ -25,26 +25,11 @@ export default function LandingPage() {
   <div id="nav" data-section="nav">
       <NavbarStyleFullscreen
       navItems={[
-        {
-          name: "Home",
-          id: "/",
-        },
-        {
-          name: "Hotels",
-          id: "/hotels",
-        },
-        {
-          name: "Drivers",
-          id: "/drivers",
-        },
-        {
-          name: "Destinations",
-          id: "/destinations",
-        },
-        {
-          name: "Plan Trip",
-          id: "/planner",
-        },
+        { name: "Home", id: "/" },
+        { name: "Hotels", id: "/hotels" },
+        { name: "Drivers", id: "/drivers" },
+        { name: "Destinations", id: "/destinations" },
+        { name: "Plan Trip", id: "/planner" },
       ]}
       brandName="Nornomade"
     />
@@ -57,6 +42,10 @@ export default function LandingPage() {
       useInvertedBackground={false}
       title="Professional Drivers"
       description="Experienced locals who know the mountain roads."
+      features={[
+          { title: "Expert Navigators", description: "Local drivers familiar with high-altitude roads.", imageSrc: "http://img.b2bpic.net/free-photo/summer-view-mountain-pass_1398-2452.jpg" },
+          { title: "Safe Travels", description: "Well-maintained vehicles for mountain trips.", imageSrc: "http://img.b2bpic.net/free-photo/high-angle-shot-narrow-ditch-high-green-mountains-norway_181624-8321.jpg" }
+      ]}
     />
   </div>
 
@@ -67,18 +56,8 @@ export default function LandingPage() {
       description="Safe travel across the north."
       imageSrc="http://img.b2bpic.net/free-photo/high-angle-shot-narrow-ditch-high-green-mountains-norway_181624-8321.jpg"
       inputs={[
-        {
-          name: "pick-up",
-          type: "text",
-          placeholder: "Pick-up Location",
-          required: true,
-        },
-        {
-          name: "destination",
-          type: "text",
-          placeholder: "Destination",
-          required: true,
-        },
+        { name: "pick-up", type: "text", placeholder: "Pick-up Location", required: true },
+        { name: "destination", type: "text", placeholder: "Destination", required: true },
       ]}
     />
   </div>
@@ -87,29 +66,15 @@ export default function LandingPage() {
       <FooterSimple
       columns={[
         {
-          title: "Explore",
-          items: [
-            {
-              label: "Hunza",
-              href: "/destinations",
-            },
-            {
-              label: "Skardu",
-              href: "/destinations",
-            },
+          title: "Explore",          items: [
+            { label: "Hunza", href: "/destinations" },
+            { label: "Skardu", href: "/destinations" },
           ],
         },
         {
-          title: "Services",
-          items: [
-            {
-              label: "Hotels",
-              href: "/hotels",
-            },
-            {
-              label: "Drivers",
-              href: "/drivers",
-            },
+          title: "Services",          items: [
+            { label: "Hotels", href: "/hotels" },
+            { label: "Drivers", href: "/drivers" },
           ],
         },
       ]}
