@@ -49,6 +49,7 @@ export default function LandingPage() {
         { text: "Chat for Hotels", onClick: () => whatsappRedirect("Hi! I'm looking for hotel recommendations in Northern Pakistan.") },
         { text: "Chat for Drivers", onClick: () => whatsappRedirect("Hi! I'm looking for a driver in Northern Pakistan.") },
         { text: "Book on WhatsApp", onClick: () => whatsappRedirect("Hi, I’m interested in booking a tour in Northern Pakistan. Please share details.") },
+        { text: "Start Your Adventure on WhatsApp", onClick: () => whatsappRedirect("Hi, I am interested in booking a tour in Northern Pakistan. Please share details and available packages.") },
         { text: "Plan My Trip", onClick: () => whatsappRedirect("Hi! I'd like to plan a custom trip in Northern Pakistan.") },
       ]}
       slides={[
