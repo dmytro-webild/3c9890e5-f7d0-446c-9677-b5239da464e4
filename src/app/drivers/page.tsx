@@ -42,10 +42,7 @@ export default function DriversPage() {
             useInvertedBackground={false}
             title="Professional Drivers"
             description="Experienced locals who know the mountain roads."
-            features={[
-              { title: "Expert Navigators", description: "Local drivers familiar with high-altitude roads." },
-              { title: "Safe Travels", description: "Well-maintained vehicles for mountain trips." }
-            ]}
+            features={[]}
           />
         </div>
 
