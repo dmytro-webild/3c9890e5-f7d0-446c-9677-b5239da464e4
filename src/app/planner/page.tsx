@@ -4,7 +4,6 @@ import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
 import ContactSplitForm from '@/components/sections/contact/ContactSplitForm';
 import FooterSimple from '@/components/sections/footer/FooterSimple';
-import LegalSection from '@/components/legal/LegalSection';
 import NavbarStyleFullscreen from '@/components/navbar/NavbarStyleFullscreen/NavbarStyleFullscreen';
 
 export default function PlannerPage() {
@@ -32,20 +31,6 @@ export default function PlannerPage() {
               { name: "Plan Trip", id: "/planner" },
             ]}
             brandName="Nornomade"
-          />
-        </div>
-
-        <div id="legal" data-section="legal">
-          <LegalSection
-            layout="section"
-            title="How the Planner Works"
-            sections={[
-              {
-                heading: "Getting Started",                content: {
-                  items: ["Input your duration", "Select your regions", "Request local quotes"]
-                }
-              },
-            ]}
           />
         </div>
 
