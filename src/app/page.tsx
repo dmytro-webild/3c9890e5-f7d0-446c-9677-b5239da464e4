@@ -2,22 +2,16 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
-import { useState } from "react";
-import ContactSplitForm from '@/components/sections/contact/ContactSplitForm';
+import HeroCarouselLogo from '@/components/sections/hero/heroCarouselLogo/HeroCarouselLogo';
 import FeatureCardThree from '@/components/sections/feature/featureCardThree/FeatureCardThree';
 import FooterSimple from '@/components/sections/footer/FooterSimple';
-import HeroCarouselLogo from '@/components/sections/hero/heroCarouselLogo/HeroCarouselLogo';
 import NavbarStyleFullscreen from '@/components/navbar/NavbarStyleFullscreen/NavbarStyleFullscreen';
 import SocialProofOne from '@/components/sections/socialProof/SocialProofOne';
 import SplitAbout from '@/components/sections/about/SplitAbout';
+import ContactText from '@/components/sections/contact/ContactText';
 
 export default function LandingPage() {
-  const handleTripPlannerSubmit = (data: Record<string, string>) => {
-    const destination = data.destination || "any";
-    const budget = data.budget || "flexible";
-    const days = data.days || "N/A";
-    const people = data.people || "1";
-    const message = `Hello! I'd like to plan a trip to ${destination}. \nBudget: ${budget}\nDuration: ${days} days\nTravelers: ${people} person(s).`;
+  const whatsappRedirect = (message: string) => {
     window.open(`https://wa.me/923000000000?text=${encodeURIComponent(message)}`, "_blank");
   };
 
@@ -42,7 +36,6 @@ export default function LandingPage() {
         { name: "Hotels", id: "/hotels" },
         { name: "Drivers", id: "/drivers" },
         { name: "Destinations", id: "/destinations" },
-        { name: "Plan Trip", id: "/planner" },
       ]}
       brandName="Nornomade"
     />
@@ -53,9 +46,9 @@ export default function LandingPage() {
       logoText="Nornomade"
       description="Find trusted hotels, drivers, and plan your perfect trip in minutes."
       buttons={[
-        { text: "Find Hotels", href: "/hotels" },
-        { text: "Find Drivers", href: "/drivers" },
-        { text: "Plan My Trip", href: "/planner" },
+        { text: "Chat for Hotels", onClick: () => whatsappRedirect("Hi! I'm looking for hotel recommendations in Northern Pakistan.") },
+        { text: "Chat for Drivers", onClick: () => whatsappRedirect("Hi! I'm looking for a driver in Northern Pakistan.") },
+        { text: "Plan My Trip", onClick: () => whatsappRedirect("Hi! I'd like to plan a custom trip in Northern Pakistan.") },
       ]}
       slides={[
         { imageSrc: "http://img.b2bpic.net/free-photo/skjolden-norway-may-16-2023-mountain_58702-11010.jpg", imageAlt: "Majestic mountain landscape Pakistan" },
@@ -78,9 +71,8 @@ export default function LandingPage() {
         { title: "Skardu", description: "Gateway to the high peaks.", imageSrc: "http://img.b2bpic.net/free-photo/house-body-water-mountain_198169-189.jpg" },
         { title: "Naran", description: "Lush valleys and river retreats.", imageSrc: "http://img.b2bpic.net/free-photo/waters-lake-lac-lioson-surrounded-by-trees-mountains-switzerland_181624-31695.jpg" },
         { title: "Kaghan", description: "Serene nature and alpine lakes.", imageSrc: "http://img.b2bpic.net/free-photo/flam-norway-june-06-2023-mountain_58702-11034.jpg" },
-        { title: "Fairy Meadows", description: "Basecamp for Nanga Parbat.", imageSrc: "http://img.b2bpic.net/free-photo/olden-norway-may-17-2023_58702-16437.jpg" },
-        { title: "Gilgit", description: "The heart of the north.", imageSrc: "http://img.b2bpic.net/free-photo/bridge-with-city_1127-4175.jpg" },
       ]}
+      buttons={[{ text: "Inquire about Tours", onClick: () => whatsappRedirect("I am interested in tours to your featured destinations.") }]}
       title="Featured Destinations"
       description="Explore the most breathtaking regions in Northern Pakistan."
     />
@@ -92,6 +84,7 @@ export default function LandingPage() {
       useInvertedBackground={false}
       title="Experience Northern Pakistan"
       description="We connect travelers with authentic local experiences, ensuring your safety and comfort throughout the Karakoram and Himalayan ranges."
+      buttons={[{ text: "Talk to an Expert", onClick: () => whatsappRedirect("Hi, I'd like to talk to an expert about my trip to Pakistan.") }]}
       imageSrc="http://img.b2bpic.net/free-photo/skjolden-norway-may-16-2023-mountain_58702-10858.jpg"
       mediaAnimation="slide-up"
       bulletPoints={[
@@ -107,25 +100,17 @@ export default function LandingPage() {
       useInvertedBackground={false}
       names={[
         "Hunza Tourism Board",        "Skardu Adventurers",        "Northern Heritage Trust",        "Karakoram Explorers"]}
+      buttons={[{ text: "Partner with Us", onClick: () => whatsappRedirect("Hi, I'd like to discuss partnering with Nornomade.") }]}
       title="Trusted by Local Partners"
       description="Partnering with the finest regional organizations."
     />
   </div>
 
   <div id="contact" data-section="contact">
-      <ContactSplitForm
-      useInvertedBackground={false}
-      title="Trip Planner"
-      description="Fill in your details to start planning your custom journey."
-      imageSrc="http://img.b2bpic.net/free-photo/mountain-landscape-with-trees-summer_23-2148153669.jpg"
-      onSubmit={handleTripPlannerSubmit}
-      buttonText="Send to WhatsApp"
-      inputs={[
-        { name: "destination", type: "text", placeholder: "Preferred Destination", required: true },
-        { name: "budget", type: "text", placeholder: "Budget Range", required: true },
-        { name: "days", type: "number", placeholder: "Number of Days", required: true },
-        { name: "people", type: "number", placeholder: "Number of People", required: true },
-      ]}
+      <ContactText
+      text="Ready to start your adventure? Let's chat directly on WhatsApp."
+      background={{ variant: "gradient-bars" }}
+      buttons={[{ text: "Chat on WhatsApp", onClick: () => whatsappRedirect("Hi, I'm ready to start my adventure in Northern Pakistan!") }]}
     />
   </div>
 
@@ -134,14 +119,14 @@ export default function LandingPage() {
       columns={[
         {
           title: "Explore",          items: [
-            { label: "Hunza", href: "/destinations" },
-            { label: "Skardu", href: "/destinations" },
+            { label: "Hunza", onClick: () => whatsappRedirect("Hi, I'm interested in visiting Hunza.") },
+            { label: "Skardu", onClick: () => whatsappRedirect("Hi, I'm interested in visiting Skardu.") },
           ],
         },
         {
           title: "Services",          items: [
-            { label: "Hotels", href: "/hotels" },
-            { label: "Drivers", href: "/drivers" },
+            { label: "Hotels", onClick: () => whatsappRedirect("Hi, I'm looking for hotel recommendations.") },
+            { label: "Drivers", onClick: () => whatsappRedirect("Hi, I'm looking for a reliable driver.") },
           ],
         },
       ]}
