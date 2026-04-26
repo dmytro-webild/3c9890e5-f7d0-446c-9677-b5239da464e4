@@ -12,7 +12,7 @@ import ContactText from '@/components/sections/contact/ContactText';
 
 export default function LandingPage() {
   const whatsappRedirect = (message: string) => {
-    window.open(`https://wa.me/923000000000?text=${encodeURIComponent(message)}`, "_blank");
+    window.open(`https://wa.me/855719513144?text=${encodeURIComponent(message)}`, "_blank");
   };
 
   return (
@@ -48,6 +48,7 @@ export default function LandingPage() {
       buttons={[
         { text: "Chat for Hotels", onClick: () => whatsappRedirect("Hi! I'm looking for hotel recommendations in Northern Pakistan.") },
         { text: "Chat for Drivers", onClick: () => whatsappRedirect("Hi! I'm looking for a driver in Northern Pakistan.") },
+        { text: "Book on WhatsApp", onClick: () => whatsappRedirect("Hi, I’m interested in booking a tour in Northern Pakistan. Please share details.") },
         { text: "Plan My Trip", onClick: () => whatsappRedirect("Hi! I'd like to plan a custom trip in Northern Pakistan.") },
       ]}
       slides={[
