@@ -2,7 +2,7 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
-import HeroSplit from '@/components/sections/hero/HeroSplit';
+import HeroBillboard from '@/components/sections/hero/HeroBillboard';
 import FeatureCardThree from '@/components/sections/feature/featureCardThree/FeatureCardThree';
 import FooterSimple from '@/components/sections/footer/FooterSimple';
 import NavbarStyleFullscreen from '@/components/navbar/NavbarStyleFullscreen/NavbarStyleFullscreen';
@@ -42,7 +42,7 @@ export default function LandingPage() {
   </div>
 
   <div id="hero" data-section="hero">
-      <HeroSplit
+      <HeroBillboard
       title="Nornomade"
       description="Find trusted hotels, drivers, and plan your perfect trip in minutes."
       background={{ variant: "gradient-bars" }}
