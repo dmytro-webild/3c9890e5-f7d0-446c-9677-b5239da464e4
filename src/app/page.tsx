@@ -2,7 +2,7 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
-import HeroBillboardRotatedCarousel from '@/components/sections/hero/HeroBillboardRotatedCarousel';
+import HeroSplit from '@/components/sections/hero/HeroSplit';
 import FeatureCardThree from '@/components/sections/feature/featureCardThree/FeatureCardThree';
 import FooterSimple from '@/components/sections/footer/FooterSimple';
 import NavbarStyleFullscreen from '@/components/navbar/NavbarStyleFullscreen/NavbarStyleFullscreen';
@@ -42,21 +42,15 @@ export default function LandingPage() {
   </div>
 
   <div id="hero" data-section="hero">
-      <HeroBillboardRotatedCarousel
+      <HeroSplit
       title="Nornomade"
       description="Find trusted hotels, drivers, and plan your perfect trip in minutes."
       background={{ variant: "gradient-bars" }}
       buttons={[
         { text: "Plan My Custom Trip", onClick: () => whatsappRedirect("Hi! I'd like to plan a custom trip in Northern Pakistan.") },
       ]}
-      carouselItems={[
-        { id: "1", imageSrc: "http://img.b2bpic.net/free-photo/skjolden-norway-may-16-2023-mountain_58702-11010.jpg", imageAlt: "Majestic mountain landscape Pakistan" },
-        { id: "2", imageSrc: "http://img.b2bpic.net/free-photo/skjolden-norway-may-16-2023-mountain_58702-10983.jpg", imageAlt: "Skjolden Norway May 16 2023 Mountain" },
-        { id: "3", imageSrc: "http://img.b2bpic.net/free-photo/rocky-snowy-mountains_181624-405.jpg", imageAlt: "Rocky snowy mountains" },
-        { id: "4", imageSrc: "http://img.b2bpic.net/free-photo/vast-valley-with-mountains-hill-sky_181624-26021.jpg", imageAlt: "Vast valley with mountains hill and the sky" },
-        { id: "5", imageSrc: "http://img.b2bpic.net/free-photo/landscape-snow-covered-himalayan-mountains-near-village-chitkul-kinnaur-india_181624-42807.jpg", imageAlt: "Landscape of snow-covered Himalayan mountains near the village of Chitkul" },
-        { id: "6", imageSrc: "http://img.b2bpic.net/free-photo/beautiful-high-angle-shot-mountainous-scenery-clear-sky_181624-8080.jpg", imageAlt: "Mountains" },
-      ]}
+      imageSrc="http://img.b2bpic.net/free-photo/skjolden-norway-may-16-2023-mountain_58702-11010.jpg"
+      imageAlt="Majestic mountain landscape Pakistan"
     />
   </div>
 
